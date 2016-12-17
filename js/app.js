@@ -12,11 +12,11 @@ var Enemy = function(x,y,speed){
     this.speed = Math.random() * (240 - 60) + 60;
 
 
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
-enemyRows = [65, 150, 230];
+var enemyRows = [65, 150, 230];
 
 
 Enemy.prototype.update = function(dt, speed) {
@@ -33,14 +33,14 @@ Enemy.prototype.update = function(dt, speed) {
     }
 
     //Collision detection using a box
-    enemyBox = {x: this.x, y: this.y};
-    playerBox = {x: player.x, y: player.y};
+    var enemyBox = {x: this.x, y: this.y};
+    var playerBox = {x: player.x, y: player.y};
     if ((enemyBox.x < (playerBox.x + 50)) && ((enemyBox.x + 75) > playerBox.x) && (enemyBox.y < (playerBox.y + 63)) && ((77 + enemyBox.y) > playerBox.y))
          {
           console.log("reset");
-      setTimeout(lostMessage, 500)
+      setTimeout(lostMessage, 500);
       setTimeout(player.reset(), 10000);
-    };
+    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -75,12 +75,12 @@ Player.prototype.update = function(x,y) {
 
 function winMessage() {
     alert('You Won!!!!!');
-};
+}
 
 function lostMessage() {
     alert('Sorry try again');
 
-};
+}
 
 Player.prototype.render = function(x,y) {   // user added
 
@@ -89,7 +89,7 @@ Player.prototype.render = function(x,y) {   // user added
     if (this.y < 0) {
       setTimeout(winMessage, 1000);
       setTimeout(player.reset(), 10000);
-    };
+    }
 };
 
 
@@ -100,25 +100,25 @@ Player.prototype.handleInput = function(key) {
             case 'left' :
               if (this.x >= 95) {
                 this.x = this.x - 95;
-            };
+            }
               break;
             case 'right' :
               if (this.x <= 375) {
                 this.x = this.x + 95;
-              };
+              }
               break;
             case 'up' :
                 if (this.y >= 50){
                   this.y = this.y - 83;
-                };
+                }
 
               break;
             case 'down' :
                 if (this.y <= 400){
                   this.y = this.y + 83;
-                };
+                }
               break;
-        };
+        }
 };
 
 // Now instantiate your objects.
