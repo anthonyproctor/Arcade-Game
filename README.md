@@ -11,13 +11,10 @@ Objectives of the game 🏃
 
 The object of the game is simple, you must direct the hero character across the grey brick road, full of enemy bugs, towards the water without getting hit.
 
-Your score is based on your current score + (level x 2) for each level you pass.
-
 The enemy bugs run across the screen at random speeds in the x direction and random y locations given their constraints which is between the grey bricks.
 
-The number of enemy bugs will increase by 1 until level 6 where an increase of 1 bug will be added to the total enemies each time you complete the level.
 
-If you run into an enemy bug, you will reset, your level decreases by 1, your score decreases by 1 and the enemy you run into will disappear.
+If you run into an enemy bug, you will reset.
 
 How to play and the controls 🎮
 

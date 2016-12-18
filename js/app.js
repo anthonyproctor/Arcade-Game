@@ -88,7 +88,7 @@ Player.prototype.render = function(x,y) {   // user added
     //checks if the player wins and sends a message and resets the game
     if (this.y < 0) {
       setTimeout(winMessage, 1000);
-      setTimeout(player.reset(), 10000);
+      setTimeout(this.reset(), 10000);
     }
 };
 
